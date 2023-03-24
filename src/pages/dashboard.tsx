@@ -6,7 +6,11 @@ export default function dashboard() {
   const { user } = useContext(AuthContext);
   const router = useRouter();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (!user) {
+      router.push('/');
+    }
+  }, []);
 
   return <div>dashboard: {user?.email}</div>;
 }
