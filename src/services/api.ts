@@ -1,7 +1,6 @@
 import { singOut } from '@/contexts/AuthContext';
 import axios, { AxiosError } from 'axios';
-import Router from 'next/router';
-import { destroyCookie, parseCookies, setCookie } from 'nookies';
+import { parseCookies, setCookie } from 'nookies';
 
 let cookies = parseCookies();
 let isRefreshing = false;
